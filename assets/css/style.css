@@ -1,0 +1,366 @@
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body {
+    background: rgb(50, 48, 48);
+    color: rgb(210, 208, 208);
+    height: 100%;
+    font-size: 16px;
+}
+
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    background: rgb(50, 48, 48);
+}
+
+body > main {
+    padding-top: 100px;
+}
+
+body > header.up {
+    visibility: visible;
+}
+body > header.down {
+    visibility: hidden;
+}
+
+body > header .wrapper{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-menu, #header-links, #footer-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1000px) {
+    div#footer-copyright {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+#header-links .header-link, #footer-links .footer-link {
+    margin: 0px 20px;
+}
+#header-logo {
+    margin-left: 10px;
+}
+#header-logo a, .header-link a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#header-logo a:hover, .header-link a:hover {
+    color: yellow;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+footer .wrapper > * {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+footer a:hover {
+    color: yellow;
+}
+
+div#header-logo {
+    font-size: 2.5em;
+}
+
+div#header-links {
+    font-size: 1.3em;
+}
+
+
+#header-hamburger {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    margin-right: 10px;
+}
+#header-hamburger .icon-bar {
+    transition: width .13s ease-out, transform .13s ease-out, opacity .13s ease-out;
+}
+#header-hamburger .icon-bar {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgb(210, 208, 208);
+    transition: width .2s ease-in-out;
+}
+#header-hamburger .icon-bar {
+    margin-top: 5px;
+}
+#header-hamburger .icon-bar:nth-child(3) {
+    width: 17px;
+}
+#header-hamburger:hover .icon-bar {
+    width: 17px;
+}
+#header-hamburger:hover .icon-bar:nth-child(3) {
+    width: 22px;
+}
+
+#hamburger-back {
+    transition: opacity 0.5s ease;
+}
+#hamburger-front {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+#hamburger-back.invisible {
+    opacity: 0;
+    z-index: -100;
+}
+#hamburger-back.visible {
+    display: inherit;
+    opacity: 1;
+    z-index: 100;
+}
+
+#hamburger-back.fading-out {
+    opacity: 0;
+    z-index: -100;
+}
+#hamburger-back.fading-in {
+    opacity: 1;
+    z-index: 100;
+}
+
+#hamburger-back.fading-out > #hamburger-front {
+    margin-right: -100%;
+}
+#hamburger-back.invisible > #hamburger-front {
+    margin-right: -100%;
+}
+#hamburger-back.fading-in > #hamburger-front {
+    margin-right: 0%;
+}
+#hamburger-back.visible > #hamburger-front {
+    margin-right: 0%;
+}
+
+
+#hamburger-front > div {
+    padding : 15px;
+}
+
+#aside-hamburger-btn-holder {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+#aside-hamburger {
+    position: relative;
+    padding: 0px;
+    height: 100%;
+    padding: 15px 0px;
+}
+#aside-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: 100%;
+    padding: 15px 0px;
+}
+
+#aside-info > div {
+    margin-bottom: 15px;
+}
+#aside-info > div:last-child{
+    margin-top: auto;
+    margin-bottom: 5em;
+}
+#aside-info > div.logo {
+    font-size: 1.3em
+}
+#aside-info > div > p {
+    padding-left: 15px;
+}
+#aside-info > div > p > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+#aside-info > div > p > a:hover {
+    color: yellow;
+}
+
+#aside-hamburger:hover {
+    cursor: pointer;
+}
+#aside-hamburger > .icon-bar {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    transition: all .2s ease-in-out;
+}
+#aside-hamburger > .icon-bar:nth-child(2) {
+    transform: rotateZ(-45deg) translate3d(5px, 0px, 0);
+    width: 28px;
+}
+#aside-hamburger > .icon-bar:nth-child(3) {
+    width: 0px;
+}
+#aside-hamburger > .icon-bar:nth-child(4) {
+    transform: rotateZ(45deg) translate3d(-3px, -7px, 0);
+    width: 28px;
+}
+
+#main-hero {
+    font-size: 3em;
+    height: calc(100vh - 100px);
+}
+#main-hero > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-hero img {
+    width: 500px;
+    height: auto;
+}
+#main-hero figure {
+    margin: 30px;
+}
+
+#scroll-to-content {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    cursor: pointer;
+    height: 1.5em;
+    width: 3.5em;
+    font-size: 16px;
+    font-size: 1rem;
+    overflow: hidden;
+    opacity: .5;
+    transform: translateX(-50%);
+    animation: pulsate 1.5s ease-out infinite;
+}
+#scroll-to-content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+#main-contact section {
+    width: 80%;
+    min-height: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 30px 0px;
+    background-color: rgb(210, 208, 208);
+    color: rgb(50, 48, 48);
+}
+#main-contact section > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#main-contact section h1 {
+    font-size: 2em;
+    margin: 30px 0px;
+}
+
+#main-contact section p {
+    font-size: 1.2em;
+    margin: 20px 0px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #header-links {
+        display: none;
+    }
+}
+
+
+body > header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    transition: transform .4s ease;
+}
+body > header.up {
+    transform: translateY(0%);
+}
+body > header.down.unlock {
+    transform: translateY(-150%);
+}
+
+
+
+#hamburger #hamburger-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(100 100 100 /0.5);
+}
+#hamburger #hamburger-front {
+    position:relative;
+    margin-left: auto;
+    width: 80vw;
+    max-width: 300px;
+    height: 100vh;
+    background: rgb(50 50 50)
+}
+@media screen and (max-width: 800px) {
+    #hamburger #hamburger-front {
+        width: calc( 300px - calc( calc( 800px - 100% ) / 40 ) );
+        max-width: 95vw;
+    }
+}
