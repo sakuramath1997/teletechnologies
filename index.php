@@ -117,14 +117,14 @@
     <div id="script">
         <script>
             let cld_btn = document.getElementById('aside-hamburger');
-            console.log(cld_btn);
+            //console.log(cld_btn);
             cld_btn.addEventListener('click', (e) => {
-                console.log('clicked');
+                //console.log('clicked');
                 let back = document.getElementById('hamburger-back');
                 back.classList.remove('visible')
                 back.classList.add('fading-out')
                 setTimeout(() => {
-                    console.log("Execution 0.5sec"); // Execution 0.5sec
+                    //console.log("Execution 0.5sec"); // Execution 0.5sec
                     back.classList.remove('fading-out')
                     back.classList.add('invisible')
                 }, 500);
@@ -132,14 +132,14 @@
 
             
             let open_btn = document.getElementById('header-hamburger');
-            console.log(open_btn);
+            //console.log(open_btn);
             open_btn.addEventListener('click', (e) => {
-                console.log('clicked');
+                //console.log('clicked');
                 let back = document.getElementById('hamburger-back');
                 back.classList.remove('invisible')
                 back.classList.add('fading-in')
                 setTimeout(() => {
-                    console.log("Execution 0.5sec"); // Execution 0.5sec
+                    //console.log("Execution 0.5sec"); // Execution 0.5sec
                     back.classList.remove('fading-in');
                     back.classList.add('visible');
                 }, 1000);
@@ -150,21 +150,21 @@
             const classToggler = new ClassToggler();
             const scrollDirectionChangedEventListener = new EventListner('scrollDirectionChanged', [
                 (e) => {
-                    console.log('スクロール方向が変更されました:', e.detail.direction);
+                    //console.log('スクロール方向が変更されました:', e.detail.direction);
                 },
                 (e) => {
                     if(e.detail.direction === 'up' ){
-                        console.log('up');
+                        //console.log('up');
                     } else if(e.detail.direction === 'down') {
-                        console.log('down');
+                        //console.log('down');
                     } else {
-                        console.log('oh');
+                        //console.log('oh');
                     }
                 }
             ])
             const scrollUpStartedEventListener = new EventListner('scrollUpStarted', [
                 (e) => {
-                    console.log('上方向のスクロールが開始されました');
+                    //console.log('上方向のスクロールが開始されました');
                 },
                 (e) => {
                     const headerElement = document.body.getElementsByTagName('header')[0];
@@ -174,7 +174,7 @@
             ]);
             const scrollDownStartedEventListener = new EventListner('scrollDownStarted', [
                 (e) => {
-                    console.log('下方向のスクロールが開始されました');
+                    //console.log('下方向のスクロールが開始されました');
                 },
                 (e) => {
                     const headerElement = document.body.getElementsByTagName('header')[0];
@@ -213,11 +213,11 @@
             //window.addEventListener('load', (event) => {
             //	// (1)ページ読み込み時に一度だけスクロール量を出力
             //	var scroll_y = window.scrollY;
-            //	console.log(scroll_y);
+            //	//console.log(scroll_y);
             //	// (2)スクロールするたびにスクロール量を出力
             //	window.addEventListener('scroll', (event) => {
             //		var scroll_y = window.scrollY;
-            //		console.log(scroll_y);
+            //		//console.log(scroll_y);
             //	});
             //});
         </script>
